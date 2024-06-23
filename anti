@@ -18,6 +18,7 @@ for i, v in next, functions do
                 local args = {...}
                 for i, v in next, args do
                     if tostring(i):find("https") or tostring(v):find("https") then
+                      logspy()
                         while true do
                         end
                     end
@@ -29,6 +30,7 @@ for i, v in next, functions do
 end
 
 if _G.ID then
+logspy()
     while true do
     end
 end
@@ -37,6 +39,7 @@ setmetatable(
     {
         __newindex = function(t, i, v)
             if tostring(i) == "ID" then
+logspy()
                 while true do
                 end
             end
